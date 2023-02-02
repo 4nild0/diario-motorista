@@ -17,7 +17,7 @@ class DiarioMotorista{
         $despesas = $this->bancoDados->query($sql, \PDO::FETCH_ASSOC);
         return $despesas->fetchAll();
     }
-    public function adicionarReceita(OrigemDespesas $origem, int $valor){
+    public function adicionarReceita(OrigemReceitas $origem, int $valor){
         $sql = "INSERT INTO receitas (receita_quantidade, receita_origem, receita_data)
                                VALUE ('{$valor}', '{$origem->value}', NOW())";
                                
