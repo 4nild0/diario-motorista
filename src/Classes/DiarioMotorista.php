@@ -17,5 +17,16 @@ class DiarioMotorista{
         $despesas = $this->bancoDados->query($sql, \PDO::FETCH_ASSOC);
         return $despesas->fetchAll();
     }
+    public function adicionarReceita(OrigemDespesas $origem, int $valor){
+        $sql = "INSERT INTO receitas (receita_quantidade, receita_origem, receita_data)
+                               VALUE ('{$valor}', '{$origem->value}', NOW())";
+                               
+        $this->bancoDados->exec($sql) or die(print_r($this->bancoDados->errorInfo(), true));
+    }
+    public function exibirReceitas(){
+        $sql = "SELECT * FROM receitas";
+        $despesas = $this->bancoDados->query($sql, \PDO::FETCH_ASSOC);
+        return $despesas->fetchAll();
+    }
 }
 ?>
