@@ -5,6 +5,6 @@ CREATE TABLE despesas (
         despesa_id INT AUTO_INCREMENT NOT NULL,
         despesa_quantidade DECIMAL (10,2) NOT NULL,
         despesa_origem VARCHAR (15) NOT NULL,
-        despesa_data DATE NOT NULL,
+        despesa_data DATETIME NOT NULL,
         PRIMARY KEY(despesa_id)
 );
