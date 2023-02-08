@@ -2,8 +2,10 @@
 namespace DiarioMotorista;
 
 enum OrigemReceitas: string{
-    case AppUber = "uber";
-    case App99 = "99";
-    case AppInDriver = "indriver";
+    case _99 = "99";
+    case InDriver = "indriver";
+    case Maxim = "maxim";
+    case Taxi = "taxi";
+    case Uber = "uber";
 }
 ?>
